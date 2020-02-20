@@ -1,0 +1,21 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+@import 'colors.scss';
+
+$krapp-primary: mat-palette($krapp-primary-color, 500);
+$krapp-red: mat-palette($krapp-red, 500);
+$krapp-green: mat-palette($krapp-green, 500);
+$krapp-amber: mat-palette($krapp-amber, 500);
+$krapp-blue: mat-palette($krapp-blue, 500);
+$krapp-text: mat-palette($krapp-text, 500);
+$krapp-text-primary: mat-palette($krapp-text, 200);
+
+
+$krapp-accent: mat-palette($krapp-green, 500);
+// The warn palette is optional (defaults to red).
+$krapp-warn: mat-palette($krapp-amber, 500);
+// Create the theme object (a Sass map containing all of the palettes).
+$krapp-theme: mat-light-theme($krapp-primary, $krapp-accent, $krapp-warn);
+
+@include angular-material-theme($krapp-theme);

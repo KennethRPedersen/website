@@ -1,0 +1,14 @@
+
+.outer-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.advert-left-panel, .advert-right-panel  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  height: 100%;
+  background-color: #1e88e5;
+}

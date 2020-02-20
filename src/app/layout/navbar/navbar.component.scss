@@ -1,0 +1,33 @@
+@import 'src/customtheme';
+
+.navbar-container {
+  color: mat-color($krapp-text-primary);
+  background-color: mat-color($krapp-primary);
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  .title-container {
+    margin: 0 1vw;
+
+    .title {
+      cursor: pointer;
+      margin: 0px;
+      font-size: 28px;
+    }
+  }
+
+  .navigation-item {
+    font-size: 18px;
+    color: mat-color($krapp-text, 400);
+  }
+
+  .navigation-item:hover {
+    transition: .15s;
+    cursor:pointer;
+    color: mat-color($krapp-text-primary);
+  }
+
+
+}

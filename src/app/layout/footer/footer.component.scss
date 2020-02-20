@@ -1,0 +1,9 @@
+@import 'src/customtheme';
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw;
+  color: mat-color($krapp-text-primary);
+  background-color: mat-color($krapp-primary);
+}
