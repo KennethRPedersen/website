@@ -8,11 +8,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {FlexModule} from '@angular/flex-layout';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import {MatCardModule} from "@angular/material/card";
-import {MatButtonModule} from "@angular/material/button";
-import {MatInputModule} from "@angular/material/input";
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProjectsComponent } from './pages/projects/projects.component';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
-    FlexModule
+    FlexModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
