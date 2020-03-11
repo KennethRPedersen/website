@@ -29,5 +29,9 @@
     color: mat-color($krapp-text-primary);
   }
 
+  .navigation-item:focus {
+    outline: none;
+  }
+
 
 }

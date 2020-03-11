@@ -1,0 +1,25 @@
+<div>
+
+  <div class="header-container">
+    <h1 class="header-title">URL Shortener</h1>
+    <h3 class="header-subtitle">Make your long URL's shorter!</h3>
+  </div>
+
+  <div class="body-container">
+    <form [formGroup]="suGroup" fxLayoutGap="5vw">
+
+      <mat-form-field fxFlex="auto">
+        <mat-label>Enter URL (Example: http://www.google.com/)</mat-label>
+        <input matInput type="text" formControlName="fullUrl" required>
+      </mat-form-field>
+
+      <button mat-button type="submit" (click)="onSubmitClicked()" fxFlex="15vw">Shorten URL</button>
+
+    </form>
+
+    <div *ngIf="result">
+      NEW URL HERE: <a href="{{result}}">{{result}}</a>
+    </div>
+  </div>
+
+</div>

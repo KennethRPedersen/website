@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import {BrowserModule, DomSanitizer} from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +13,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
-import {MatIconModule} from '@angular/material/icon';
+import {MatIconModule, MatIconRegistry} from '@angular/material/icon';
+import {HttpClientModule} from "@angular/common/http";
+import { UrlShortenerComponent } from './pages/url-shortener/url-shortener.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { RedirectorComponent } from './pages/url-shortener/redirector/redirector.component';
 
 @NgModule({
   declarations: [
@@ -21,9 +25,12 @@ import {MatIconModule} from '@angular/material/icon';
     HomeComponent,
     FooterComponent,
     NavbarComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    UrlShortenerComponent,
+    RedirectorComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -32,9 +39,15 @@ import {MatIconModule} from '@angular/material/icon';
     MatButtonModule,
     MatInputModule,
     FlexModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) {
+    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg'));
+  }
+}

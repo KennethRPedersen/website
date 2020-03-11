@@ -3,7 +3,7 @@
 @include mat-core();
 @import 'colors.scss';
 
-$krapp-primary: mat-palette($krapp-primary-color, 500);
+$krapp-primary: mat-palette($krapp-amber, 500);
 $krapp-red: mat-palette($krapp-red, 500);
 $krapp-green: mat-palette($krapp-green, 500);
 $krapp-amber: mat-palette($krapp-amber, 500);
@@ -19,3 +19,17 @@ $krapp-warn: mat-palette($krapp-amber, 500);
 $krapp-theme: mat-light-theme($krapp-primary, $krapp-accent, $krapp-warn);
 
 @include angular-material-theme($krapp-theme);
+
+.mat-button {
+  color: mat-color($krapp-text, 100);
+  background-color: mat-color($krapp-primary, 300);
+}
+
+.icon-button {
+  padding-left: 5px;
+}
+
+.mat-button:hover {
+  transition: .15s;
+  background-color: mat-color($krapp-primary, 500);
+}
