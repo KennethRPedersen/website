@@ -1,7 +1,7 @@
 @import 'src/customtheme';
 
 .navbar-container {
-  color: mat-color($krapp-text-primary);
+  color: mat-color($krapp-text-primary, 50);
   background-color: mat-color($krapp-primary);
 
   display: flex;
@@ -20,13 +20,15 @@
 
   .navigation-item {
     font-size: 18px;
-    color: mat-color($krapp-text, 400);
+    color: mat-color($krapp-text, 50);
+    border-bottom: mat-color($krapp-text, 50) 1px solid;
   }
 
   .navigation-item:hover {
     transition: .15s;
     cursor:pointer;
-    color: mat-color($krapp-text-primary);
+    color: mat-color($krapp-primary, 50);
+    border-bottom: mat-color($krapp-primary, 50) 1px solid;
   }
 
   .navigation-item:focus {
