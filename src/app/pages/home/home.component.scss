@@ -48,14 +48,11 @@
     }
 
     .card-actions {
-      justify-content: space-around;
       display: flex;
       flex-wrap: wrap;
-
-      .mat-button {
-        margin: 0px;
-      }
+      margin: .25vw;
     }
+
   }
 
   .card:hover {
@@ -65,8 +62,6 @@
     box-shadow: 0px 7px 13px 0px mat-color($krapp-text, 500);
   }
 
-}
-
-.feature-container {
 
 }
+

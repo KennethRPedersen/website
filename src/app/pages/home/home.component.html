@@ -6,8 +6,10 @@
 
   <div class="content-container">
     <h2 class="content-title">My latest work</h2>
+
     <div class="card-container" fxLayout="row" fxLayoutGap="2.5vw">
-      <mat-card class="card" fxFlex="33%">
+
+      <mat-card class="card" fxFlex="33%" fxLayout="column">
         <mat-card-title class="card-title">
           Discord Base Bot
         </mat-card-title>
@@ -21,37 +23,84 @@
             Features:
             <ul class="feature-list">
               <li class="feature">A basic quote bot ready to use</li>
-              <li class="feature">Premade dal using Entity Framework</li>
+              <li class="feature">Entity Framework 6</li>
               <li class="feature">Easy-to-replace SQLite db</li>
             </ul>
           </div>
         </mat-card-content>
-        <mat-card-actions class="card-actions">
-          <button mat-button class="icon-button">
+        <mat-card-actions class="card-actions" fxFlexOffset="auto">
+          <a mat-button class="icon-button" href="https://github.com/KennethRPedersen/discord-base-bot">
             <mat-icon svgIcon="github"></mat-icon>
             Github
+          </a>
+          <button mat-button routerLink="/projects" class="icon-button">
+            <mat-icon svgIcon="information"></mat-icon>
+            More info
           </button>
-          <button mat-button>More info</button>
-          <button mat-button>Something else</button>
         </mat-card-actions>
       </mat-card>
 
-      <mat-card class="card" fxFlex="33%">
+      <mat-card class="card" fxFlex="33%" fxLayout="column">
         <mat-card-title class="card-title">
-          Card 2
+          VACBot
         </mat-card-title>
+        <mat-card-subtitle class="card-subtitle">
+          C# Discord Bot
+        </mat-card-subtitle>
         <mat-card-content>
+          <p>A Discord bot to keep track of VAC status of tracked users.</p>
+
+          <div class="feature-container">
+            Features:
+            <ul class="feature-list">
+              <li class="feature">Easy tracking of users</li>
+              <li class="feature">Update statuses with a single click</li>
+              <li class="feature">(WIP) Automated update twice a day</li>
+            </ul>
+          </div>
 
         </mat-card-content>
+        <mat-card-actions class="card-actions" fxFlexOffset="auto">
+          <a mat-button class="icon-button" href="https://github.com/KennethRPedersen/VACBot">
+            <mat-icon svgIcon="github"></mat-icon>
+            Github
+          </a>
+          <button mat-button routerLink="/projects" class="icon-button">
+            <mat-icon svgIcon="information"></mat-icon>
+            More info
+          </button>
+        </mat-card-actions>
       </mat-card>
 
-      <mat-card class="card" fxFlex="33%">
+      <mat-card class="card" fxFlex="33%" fxLayout="column">
         <mat-card-title class="card-title">
-          Card 3
+          URL Shortener
         </mat-card-title>
+        <mat-card-subtitle class="card-subtitle">
+          Angular/C# project
+        </mat-card-subtitle>
         <mat-card-content>
+          <p>An API with a frontend (found on this site) to make very long URL's much shorter.</p>
+
+          <div class="feature-container">
+            Features:
+            <ul class="feature-list">
+              <li class="feature">Easy to use API with only two endpoints</li>
+              <li class="feature">Easy to use UI</li>
+            </ul>
+          </div>
 
         </mat-card-content>
+        <mat-card-actions class="card-actions" fxFlexOffset="auto">
+          <a mat-button class="icon-button" routerLink="/short-url">
+            <mat-icon svgIcon="link-variant"></mat-icon>
+            Go to page
+          </a>
+          <button mat-button routerLink="/projects" class="icon-button">
+            <mat-icon svgIcon="information"></mat-icon>
+            More info
+          </button>
+        </mat-card-actions>
       </mat-card>
 
     </div>
