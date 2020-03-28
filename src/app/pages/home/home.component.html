@@ -1,3 +1,4 @@
+<!-- DESKTOP -->
 <div class="home-container">
   <div class="header-container">
     <h1 class="header-title">KRAPP.XYZ</h1>
@@ -7,9 +8,9 @@
   <div class="content-container">
     <h2 class="content-title">My latest work</h2>
 
-    <div class="card-container" fxLayout="row" fxLayoutGap="2.5vw">
+    <div class="card-container" fxLayout.gt-md="row" fxLayout.lt-md="column" fxLayoutGap="2.5vw">
 
-      <mat-card class="card" fxFlex="33%" fxLayout="column">
+      <mat-card class="card" fxFlex.gt-md="33%" fxLayout="column">
         <mat-card-title class="card-title">
           Discord Base Bot
         </mat-card-title>
@@ -29,18 +30,20 @@
           </div>
         </mat-card-content>
         <mat-card-actions class="card-actions" fxFlexOffset="auto">
-          <a mat-button class="icon-button" href="https://github.com/KennethRPedersen/discord-base-bot">
+          <a mat-button class="icon-button" href="https://github.com/KennethRPedersen/discord-base-bot" fxFlex.lt-md="100%">
             <mat-icon svgIcon="github"></mat-icon>
             Github
           </a>
-          <button mat-button routerLink="/projects" class="icon-button">
+
+          <button mat-button routerLink="/projects" class="icon-button" fxFlex.lt-md="100%">
             <mat-icon svgIcon="information"></mat-icon>
             More info
           </button>
+
         </mat-card-actions>
       </mat-card>
 
-      <mat-card class="card" fxFlex="33%" fxLayout="column">
+      <mat-card class="card" fxFlex.gt-md="33%" fxLayout="column">
         <mat-card-title class="card-title">
           VACBot
         </mat-card-title>
@@ -61,18 +64,21 @@
 
         </mat-card-content>
         <mat-card-actions class="card-actions" fxFlexOffset="auto">
-          <a mat-button class="icon-button" href="https://github.com/KennethRPedersen/VACBot">
+
+          <a mat-button class="icon-button" href="https://github.com/KennethRPedersen/VACBot" fxFlex.lt-md="100%">
             <mat-icon svgIcon="github"></mat-icon>
             Github
           </a>
-          <button mat-button routerLink="/projects" class="icon-button">
+
+          <button mat-button routerLink="/projects" class="icon-button" fxFlex.lt-md="100%">
             <mat-icon svgIcon="information"></mat-icon>
             More info
           </button>
+
         </mat-card-actions>
       </mat-card>
 
-      <mat-card class="card" fxFlex="33%" fxLayout="column">
+      <mat-card class="card" fxFlex.gt-md="33%" fxLayout="column">
         <mat-card-title class="card-title">
           URL Shortener
         </mat-card-title>
@@ -92,17 +98,21 @@
 
         </mat-card-content>
         <mat-card-actions class="card-actions" fxFlexOffset="auto">
-          <a mat-button class="icon-button" routerLink="/short-url">
+
+          <button mat-button class="icon-button" routerLink="/short-url" fxFlex.lt-md="100%">
             <mat-icon svgIcon="link-variant"></mat-icon>
             Go to page
-          </a>
-          <button mat-button routerLink="/projects" class="icon-button">
+          </button>
+
+          <button mat-button routerLink="/projects" class="icon-button" fxFlex.lt-md="100%">
             <mat-icon svgIcon="information"></mat-icon>
             More info
           </button>
+
         </mat-card-actions>
       </mat-card>
 
     </div>
+
   </div>
 </div>

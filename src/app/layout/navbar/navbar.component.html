@@ -1,10 +1,17 @@
-<div fxShow.lt-sm fxHide class="navbar-container" fxLayout="row">
+
+<!-- MOBILE -->
+<div fxShow.lt-md fxHide class="navbar-container" fxLayout="row" >
   <div class="title-container">
     <p class="title" routerLink="/">KRAPP.XYZ</p>
   </div>
+
+  <div class="navigation-container" fxLayout="row" fxFlexOffset="auto">
+    <p (click)="menuClicked()"><mat-icon svgIcon="{{sidenavStatus ? 'close-thick' : 'hamburger'}}" class="navigation-icon">MENU</mat-icon></p>
+  </div>
 </div>
 
-<div fxHide.lt-sm class="navbar-container" fxLayout="row">
+<!-- DESKTOP -->
+<div fxHide.lt-md class="navbar-container" fxLayout="row">
   <div class="title-container">
       <p class="title" routerLink="/">KRAPP.XYZ</p>
   </div>

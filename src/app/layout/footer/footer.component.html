@@ -1,7 +1,7 @@
-<div class="outer-container">
-  <div class="footer-container" fxLayout="row" fxLayoutGap="5vw">
+<div class="outer-container" fxShow.gt-sm fxHide>
+  <div class="footer-container" fxLayout.gt-md="row" fxLayout.lt-sm="column" fxLayoutGap="5vw">
 
-    <div class="footer-column" fxLayout="column">
+    <div class="footer-column" fxLayout.gt-sm="column">
       <a href="https://www.github.com/kennethrpedersen">
         <mat-icon svgIcon="github"></mat-icon>
         Github
@@ -12,16 +12,43 @@
       </a>
     </div>
 
-    <div class="footer-column" fxLayout="column">
+    <div class="footer-column" fxLayout.gt-sm="column">
       <p>
         <mat-icon svgIcon="discord"></mat-icon>
         GustavoA#2037
       </p>
     </div>
 
-    <div class="footer-column" fxFlexOffset="auto">
+    <div class="copyright" fxFlexOffset.gt-sm="auto">
       <p>Copyright © 2020 KRAPP.XYZ</p>
     </div>
 
   </div>
 </div>
+
+<div class="outer-container" fxShow.lt-md fxHide>
+  <div class="footer-container" fxLayout.gt-sm="row" fxLayout.lt-sm="column" fxLayoutGap="5vw">
+
+    </div>
+    <div class="footer-column" fxLayout.gt-sm="column">
+      <div class="footer-column" fxLayout.gt-sm="column">
+        <a href="https://www.github.com/kennethrpedersen">
+          <mat-icon svgIcon="github"></mat-icon>
+          Github
+        </a>
+        <a href="https://steamcommunity.com/id/gustavoamericano">
+          <mat-icon svgIcon="steam"></mat-icon>
+          Steam
+        </a>
+        <p>
+         <mat-icon svgIcon="discord"></mat-icon>
+          GustavoA#2037
+        </p>
+    </div>
+
+    <div class="copyright">
+      <p>Copyright © 2020 KRAPP.XYZ</p>
+    </div>
+  </div>
+</div>
+

@@ -1,23 +1,41 @@
 <div fxFlexFill fxLayout="column">
-  <app-navbar></app-navbar>
+  <app-navbar (openSidenav)="toggleSidenav()" [sidenavStatus]="sidenavOpened"></app-navbar>
+  <mat-drawer-container fxFlex="auto">
 
-  <div class="outer-container" fxFlex="auto">
+    <!-- SIDENAV DRAWER -->
+    <mat-drawer class="menu-drawer" mode="over" [(opened)]="sidenavOpened">
+      <div fxLayout="column" fxFlex>
+        <app-sidenav-drawer (pageClicked)="toggleSidenav()"></app-sidenav-drawer>
+        <div class="copyright" fxFlexOffset="auto" fxLayout="column">
+          <p>Copyright © 2020 KRAPP.XYZ</p>
+        </div>
+      </div>
+    </mat-drawer>
 
-    <!-- ADVERT LEFT SIDE -->
-    <div class="advert-left-panel">
-    </div>
 
-    <div class="outlet-container" fxFlex="auto">
-      <router-outlet></router-outlet>
-    </div>
+    <!-- SIDENAV CONTENTW -->
+    <mat-drawer-content fxLayout="column">
 
-    <!-- ADVERT RIGHT SIDE -->
-    <div class="advert-right-panel">
-    </div>
+      <div class="outer-container" fxFlex="auto">
 
-  </div>
-  <app-snaccbar></app-snaccbar>
-  <app-footer fxFlexOffset="auto"></app-footer>
+        <!-- ADVERT LEFT SIDE -->
+        <div class="advert-left-panel" fxHide.lt-md>
+        </div>
+
+        <div class="outlet-container" fxFlex="auto">
+          <router-outlet></router-outlet>
+        </div>
+
+        <!-- ADVERT RIGHT SIDE -->
+        <div class="advert-right-panel" fxHide.lt-md>
+        </div>
+
+      </div>
+      <app-snaccbar></app-snaccbar>
+      <app-footer fxFlexOffset="auto"></app-footer>
+
+    </mat-drawer-content>
+  </mat-drawer-container>
 </div>
 
 

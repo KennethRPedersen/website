@@ -6,14 +6,14 @@
   </div>
 
   <div class="body-container">
-    <form [formGroup]="suGroup" fxLayoutGap="5vw">
+    <form [formGroup]="suGroup" fxLayoutGap="5vw" fxLayout.lt-md="column" fxLayout="row">
 
-      <mat-form-field fxFlex="auto">
+      <mat-form-field fxFlex=".75 0 0">
         <mat-label>Enter URL (Example: http://www.google.com/)</mat-label>
         <input matInput type="text" formControlName="fullUrl" required>
       </mat-form-field>
 
-      <button mat-button type="submit" (click)="onSubmitClicked()" fxFlex="15vw">Shorten URL</button>
+      <button mat-button type="submit" (click)="onSubmitClicked()" fxFlex=".25 0 0">Shorten URL</button>
 
     </form>
 

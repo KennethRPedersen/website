@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,10 @@ import {Component, ViewEncapsulation} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'personalsite';
+  title = 'KRAPP.XYZ';
+  sidenavOpened: boolean;
+
+  toggleSidenav() {
+    this.sidenavOpened = !this.sidenavOpened;
+  }
 }

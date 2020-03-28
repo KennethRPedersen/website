@@ -21,6 +21,8 @@ import { RedirectorComponent } from './pages/url-shortener/redirector/redirector
 import { AboutComponent } from './pages/about/about.component';
 import {SnaccbarModule} from './components/snaccbar/snaccbar.module';
 import { PlaygroundComponent } from './pages/playground/playground.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { SidenavDrawerComponent } from './layout/sidenav-drawer/sidenav-drawer.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { PlaygroundComponent } from './pages/playground/playground.component';
     RedirectorComponent,
     AboutComponent,
     PlaygroundComponent,
+    SidenavDrawerComponent,
   ],
   imports: [
     HttpClientModule,
@@ -48,7 +51,8 @@ import { PlaygroundComponent } from './pages/playground/playground.component';
     FormsModule,
     ReactiveFormsModule,
     SnaccbarModule,
-    ExtendedModule
+    ExtendedModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

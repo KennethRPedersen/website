@@ -1,0 +1,26 @@
+@import 'src/customtheme';
+
+
+.outer-container {
+  width: 100vw;
+
+
+
+  color: mat-color($krapp-text-primary, 50);
+}
+
+.navigation-container {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  .navigation-item {
+    font-size: 24px;
+  }
+}
+
+
