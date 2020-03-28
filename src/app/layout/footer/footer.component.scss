@@ -2,8 +2,33 @@
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
-  padding: 1vw;
-  color: mat-color($krapp-text-primary);
+  align-items: flex-end;
+  color: mat-color($krapp-primary, 50);
+  padding: 1vw 1vw 0vw 1vw;
+  margin-top: 5vw;
   background-color: mat-color($krapp-primary);
+}
+
+a, p{
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+mat-icon {
+  margin-right: 5px;
+}
+
+.footer-column:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: flex-end;
+  align-content: flex-end;
+}
+
+.outer-container {
+  background-color: mat-color($krapp-primary);
+  padding: 0 15vw;
 }

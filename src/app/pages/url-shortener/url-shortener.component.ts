@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {HttpClient} from "@angular/common/http";
 import {ShorturlService} from "./service/shorturl.service";
+import {SnaccbarService} from '../../components/snaccbar/snaccbar.service';
 
 @Component({
   selector: 'app-url-shortener',
@@ -15,7 +16,7 @@ export class UrlShortenerComponent implements OnInit {
   });
   result: string;
 
-  constructor(private service: ShorturlService) { }
+  constructor(private service: ShorturlService, private snaccService: SnaccbarService) { }
 
   ngOnInit() {
   }
@@ -31,6 +32,7 @@ export class UrlShortenerComponent implements OnInit {
       // CONTACT BACKEND
       this.service.CreateUrl(fullUrl).subscribe(res => {
         this.result = window.location.origin + '/s/' + res.toString();
+        this.snaccService.addSnacc({text: ['Short URL created!'], time: 3000, buttonText: 'Amazing!'});
       });
 
     }

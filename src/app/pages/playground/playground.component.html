@@ -1,0 +1,57 @@
+<div>
+
+  <!-- HEADER -->
+  <div class="header-container">
+    <h1 class="header-title">PLAYGROUND</h1>
+    <h3 class="header-subtitle">Play around with various features and stuff!!</h3>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content-container" fxLayout="column">
+
+    <!-- Snackbar playground -->
+    <div class="card-container">
+      <mat-card class="card" fxFlex fxLayout="column">
+
+        <mat-card-title class="card-title">
+          Snackbar playground
+        </mat-card-title>
+        <mat-card-subtitle class="card-subtitle">
+          Play around with the sites snackbar!
+        </mat-card-subtitle>
+
+        <mat-card-content>
+
+          <div class="form-container">
+            <form [formGroup]="snackbarForm" fxLayout="column">
+              <mat-form-field fxFlex>
+                <mat-label>Messages separated by comma (one message, two message)</mat-label>
+                <input matInput type="text" formControlName="messages">
+              </mat-form-field>
+
+              <mat-form-field fxFlex>
+                <mat-label>Time to show message (ms) Set to 0 for indefinite</mat-label>
+                <input matInput type="number" formControlName="time">
+              </mat-form-field>
+
+              <mat-form-field fxFlex>
+                <mat-label>Button message</mat-label>
+                <input matInput type="text" formControlName="buttonText">
+              </mat-form-field>
+
+              <button mat-button (click)="onCreateSnacc()">Generate snackbar!</button>
+            </form>
+          </div>
+
+        </mat-card-content>
+
+        <mat-card-actions class="card-actions" fxFlexOffset="auto">
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </div>
+
+</div>
+
+

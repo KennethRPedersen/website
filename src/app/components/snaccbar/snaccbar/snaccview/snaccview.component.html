@@ -1,0 +1,10 @@
+<div>
+  <div class="badge" matBadge="{{snaccCount}}" matBadgePosition="above" matBadgeOverlap="false"></div>
+  <div fxLayout="row" class="container">
+    <div class="text-container" fxLayout="column">
+      <p *ngFor="let text of data.text">{{text}}</p>
+    </div>
+    <button mat-button class="action-button" fxFlexOffset="auto" (click)="onDismiss()">{{data.buttonText ? data.buttonText : 'OK'}}</button>
+  </div>
+  <mat-progress-bar class="counter" mode="determinate" value="{{ (timeLeft / data.time) * 100}}" *ngIf="data.time"></mat-progress-bar>
+</div>

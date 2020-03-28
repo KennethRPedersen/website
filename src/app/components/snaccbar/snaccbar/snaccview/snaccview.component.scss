@@ -1,0 +1,39 @@
+@import "src/customtheme";
+
+
+p {
+  margin: 0;
+  padding: 0 0 8px 0;
+}
+
+p:last-child {
+  padding: 0;
+}
+
+.text-container {
+  display: flex;
+  word-break: break-all;
+  justify-content: center;
+  padding-right: 16px;
+}
+
+.action-button {
+  display: flex;
+  max-width: 100%;
+  align-self: center;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.counter {
+  margin-top: 8px;
+}
+
+.badge {
+  margin: -10px -5px 0 0;
+
+  .mat-badge-content {
+    background-color: mat-color($krapp-green, 100);
+  }
+}

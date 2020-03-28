@@ -14,10 +14,13 @@ import {MatInputModule} from '@angular/material/input';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import {MatIconModule, MatIconRegistry} from '@angular/material/icon';
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from '@angular/common/http';
 import { UrlShortenerComponent } from './pages/url-shortener/url-shortener.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RedirectorComponent } from './pages/url-shortener/redirector/redirector.component';
+import { AboutComponent } from './pages/about/about.component';
+import {SnaccbarModule} from './components/snaccbar/snaccbar.module';
+import { PlaygroundComponent } from './pages/playground/playground.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { RedirectorComponent } from './pages/url-shortener/redirector/redirector
     NavbarComponent,
     ProjectsComponent,
     UrlShortenerComponent,
-    RedirectorComponent
+    RedirectorComponent,
+    AboutComponent,
+    PlaygroundComponent,
   ],
   imports: [
     HttpClientModule,
@@ -41,7 +46,8 @@ import { RedirectorComponent } from './pages/url-shortener/redirector/redirector
     FlexModule,
     MatIconModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SnaccbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

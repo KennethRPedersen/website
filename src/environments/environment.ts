@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  backendurl: 'https://localhost:44389'
+  backendurl: 'https://short.krapp.xyz'
 };
 
 /*
