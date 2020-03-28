@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {FlexModule} from '@angular/flex-layout';
+import {ExtendedModule, FlexModule} from '@angular/flex-layout';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import {MatCardModule} from '@angular/material/card';
@@ -47,7 +47,8 @@ import { PlaygroundComponent } from './pages/playground/playground.component';
     MatIconModule,
     FormsModule,
     ReactiveFormsModule,
-    SnaccbarModule
+    SnaccbarModule,
+    ExtendedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

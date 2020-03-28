@@ -8,7 +8,6 @@ import {SnaccModel} from '../snaccbar/models/snacc.model';
 export class SnaccbarService {
 
   private snaccList: SnaccModel[] = [];
-  private activeSnacc: SnaccModel;
   private snaccSubject = new BehaviorSubject<SnaccModel>(null);
   private snaccCount = new BehaviorSubject<number>(0);
 
@@ -24,24 +23,28 @@ export class SnaccbarService {
   }
 
   private nextSnacc() {
-    if (this.snaccList.length === 0) { return; }
+    if (this.snaccList.length === 0) {
+      this.snaccSubject.next(undefined);
+      return;
+    }
 
-    this.snaccSubject.next(this.snaccList[0]);
-    this.snaccCount.next(this.snaccList.length);
+    this.snaccSubject.next(this.snaccList.shift());
+    this.updateSnaccCount();
   }
 
   public snaccDismissed() {
-    this.snaccList.splice(0, 1);
     this.nextSnacc();
   }
 
   public addSnacc(snacc: SnaccModel) {
     this.snaccList.push(snacc);
-
-    if (this.snaccList.length === 1) {
+    if (!this.snaccSubject.value) {
       this.nextSnacc();
     }
+    this.updateSnaccCount();
+  }
 
+  private updateSnaccCount() {
     this.snaccCount.next(this.snaccList.length);
   }
 }

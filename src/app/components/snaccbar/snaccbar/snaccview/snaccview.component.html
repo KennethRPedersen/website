@@ -1,5 +1,5 @@
 <div>
-  <div class="badge" matBadge="{{snaccCount}}" matBadgePosition="above" matBadgeOverlap="false"></div>
+  <div *ngIf="snaccCount > 0" class="badge" matBadge="{{snaccCount}}" matBadgePosition="above" matBadgeOverlap="false"></div>
   <div fxLayout="row" class="container">
     <div class="text-container" fxLayout="column">
       <p *ngFor="let text of data.text">{{text}}</p>

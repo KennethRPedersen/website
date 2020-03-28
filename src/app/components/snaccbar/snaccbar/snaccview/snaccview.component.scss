@@ -31,9 +31,11 @@ p:last-child {
 }
 
 .badge {
-  margin: -10px -5px 0 0;
-
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  z-index: -1;
   .mat-badge-content {
-    background-color: mat-color($krapp-green, 100);
+    background-color: mat-color($krapp-green, 200);
   }
 }
