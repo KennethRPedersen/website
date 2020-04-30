@@ -1,0 +1,41 @@
+<div class="outer-container" fxLayout="column">
+
+  <div class="card-container" fxFlex>
+    <mat-card class="card chat-body" fxLayout="column" fxFlex>
+      <mat-card-title class="card-title">
+        Live Chat
+      </mat-card-title>
+      <mat-card-subtitle class="card-subtitle">
+        Currently {{userCount}} users online!
+      </mat-card-subtitle>
+      <mat-card-content id="message-area" class="message-area" fxLayout="column">
+          <div *ngFor="let msg of chatMessages" class="message-item">
+            <div [ngClass]="msg.type === 'usermessage' ? 'user-message' : 'server-notice'" class="message-content">
+              <span *ngIf="msg.user">{{msg.user}}: </span><span>{{msg.message}}</span>
+            </div>
+          </div>
+      </mat-card-content>
+
+      <mat-card-actions   fxFlexOffset="auto" fxLayoutGap="10px" fxLayout="column">
+        <span class="users-typing">{{usersTyping}}</span>
+
+        <form [formGroup]="messageDataForm" fxFlex="auto" class="chat-footer" (ngSubmit)="sendChatMessage()" fxLayout.lt-md="column">
+          <mat-form-field fxFlex="20%">
+            <mat-label>Username</mat-label>
+            <input matInput type="text" autocomplete="none" (change)="usernameChanged()" formControlName="username">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="59%">
+            <mat-label>Message</mat-label>
+            <input matInput type="text" autocomplete="none" (ngModelChange)="userTyping()" formControlName="message">
+          </mat-form-field>
+
+          <button mat-button fxFlex="12.5%" class="chat-button">Send</button>
+        </form>
+      </mat-card-actions>
+
+    </mat-card>
+  </div>
+
+
+</div>

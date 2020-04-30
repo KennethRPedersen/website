@@ -1,0 +1,56 @@
+@import 'src/customtheme';
+
+.outer-container {
+  height: 70vh;
+  margin-top: 5vh;
+}
+
+.card-container {
+  max-height: 70vh;
+}
+
+.chat-footer {
+  padding-top: .5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-items: center;
+}
+
+.chat-button {
+  height: 5vh;
+}
+
+.message-item {
+  font-size: 16px;
+}
+
+.message-content {
+  padding: .25em .5em;
+}
+
+
+.message-area {
+  height: 100%;
+  overflow-y: auto;
+  overflow-scrolling: auto;
+  word-break: break-all;
+}
+
+.users-typing {
+  padding-left: 1.5vh;
+}
+
+/*.message-item {
+  color: mat-color($krapp-text, 50);
+  background-color: mat-color($krapp-primary, 500);
+}
+
+.message-item:nth-child(odd) {
+  background-color: mat-color($krapp-primary, 400);
+}*/
+
+.server-notice {
+  background-color: mat-color($krapp-primary, 500);
+  color: mat-color($krapp-text-primary, 50);
+}

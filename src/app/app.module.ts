@@ -23,6 +23,12 @@ import {SnaccbarModule} from './components/snaccbar/snaccbar.module';
 import { PlaygroundComponent } from './pages/playground/playground.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { SidenavDrawerComponent } from './layout/sidenav-drawer/sidenav-drawer.component';
+import {LiveChatModule} from './pages/live-chat/live-chat.module';
+import { RoleplayGameComponent } from './pages/roleplay-game/roleplay-game/roleplay-game.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
+import { PlayerdataEditorComponent } from './pages/roleplay-game/dummies/playerdata-editor/playerdata-editor.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -36,6 +42,8 @@ import { SidenavDrawerComponent } from './layout/sidenav-drawer/sidenav-drawer.c
     AboutComponent,
     PlaygroundComponent,
     SidenavDrawerComponent,
+    RoleplayGameComponent,
+    PlayerdataEditorComponent,
   ],
   imports: [
     HttpClientModule,
@@ -52,7 +60,14 @@ import { SidenavDrawerComponent } from './layout/sidenav-drawer/sidenav-drawer.c
     ReactiveFormsModule,
     SnaccbarModule,
     ExtendedModule,
-    MatSidenavModule
+    MatSidenavModule,
+    LiveChatModule,
+    MatTableModule,
+    MatSortModule,
+    MatDialogModule,
+  ],
+  entryComponents: [
+    PlayerdataEditorComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,38 @@
+<div class="outer-container">
+  <div>
+    <h3 *ngIf="!data">New player</h3>
+    <h3 *ngIf="data">Editing {{data.name}} (ID: {{data.id}})</h3>
+  </div>
+  <div>
+    <div class="form-container">
+      <form [formGroup]="playerForm" fxLayout="column">
+        <mat-form-field fxFlex>
+          <mat-label>Name</mat-label>
+          <input matInput type="text" formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field fxFlex>
+          <mat-label>Phone</mat-label>
+          <input matInput type="text" formControlName="phone">
+        </mat-form-field>
+
+        <mat-form-field fxFlex>
+          <mat-label>Gang</mat-label>
+          <input matInput type="text" formControlName="gang">
+        </mat-form-field>
+
+        <mat-form-field fxFlex>
+          <mat-label>Standing</mat-label>
+          <input matInput type="text" formControlName="standing">
+        </mat-form-field>
+
+        <mat-form-field fxFlex>
+          <mat-label>Description</mat-label>
+          <input matInput type="text" formControlName="description">
+        </mat-form-field>
+
+        <button mat-button [mat-dialog-close]="onAcceptClicked()">{{data? 'Update User' : 'Create User'}}</button>
+      </form>
+    </div>
+  </div>
+</div>

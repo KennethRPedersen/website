@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  backendurl: 'https://short.krapp.xyz'
+  backendurl: 'https://short.krapp.xyz',
+  chatip: 'localhost:13337',
+  gangip: 'http://localhost:9999'
 };
 
 /*

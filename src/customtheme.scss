@@ -164,3 +164,12 @@ $krapp-theme: mat-light-theme($krapp-primary, $krapp-accent, $krapp-warn);
     }
   }
 }
+
+mat-cell,
+mat-footer-cell,
+mat-header-cell {
+  min-width: 100px;
+  margin: 2.5px;
+  word-break: break-word;
+}
+

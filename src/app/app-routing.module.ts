@@ -6,6 +6,8 @@ import {UrlShortenerComponent} from './pages/url-shortener/url-shortener.compone
 import {RedirectorComponent} from './pages/url-shortener/redirector/redirector.component';
 import {AboutComponent} from './pages/about/about.component';
 import {PlaygroundComponent} from './pages/playground/playground.component';
+import {LiveChatComponent} from './pages/live-chat/live-chat/live-chat.component';
+import {RoleplayGameComponent} from './pages/roleplay-game/roleplay-game/roleplay-game.component';
 
 
 const routes: Routes = [
@@ -14,7 +16,9 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'short-url', component: UrlShortenerComponent},
   {path: 's/:url', component: RedirectorComponent},
-  {path: 'playground', component: PlaygroundComponent}
+  {path: 'live-chat', component: LiveChatComponent},
+  {path: 'playground', component: PlaygroundComponent},
+  {path: 'roleplaygame', component: RoleplayGameComponent}
 ];
 
 @NgModule({
